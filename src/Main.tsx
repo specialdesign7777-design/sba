@@ -119,6 +119,7 @@ export default function Main() {
                                 src={img_menu}
                                 width={40}
                                 onClick={() => SetMenu(true)}
+                                alt="menu"
                             />
                         </div>
                     </div>
@@ -192,6 +193,7 @@ export default function Main() {
 
             {Zapisat ? (
                 <div className="zap" onClick={() => SetZapisat(false)}>
+
                     <div
                         className="window"
                         onClick={(e) => e.stopPropagation()}
@@ -217,12 +219,14 @@ export default function Main() {
                                 <a
                                     href="https://vk.com/southern_boxing_academy"
                                     target="_blank"
+                                    // rel="noopener"
                                 >
                                     <img src={vk} alt="" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                     target="_blank"
+                                    // rel="noopener"
                                 >
                                     <img src={inst} alt="" />
                                 </a>
@@ -245,10 +249,12 @@ export default function Main() {
 
                         <div className="zapisat">
                             <div className="wrapper">
-                                <a
-                                    onClick={() => SetZapisat(true)}
+                                <div
+                                    onClick={() => {SetZapisat(true)
+                                        console.log('uyu');
+                                        
+                                    }}
                                     className="cta"
-                                    href="#"
                                 >
                                     <span>ЗАПИСАТЬСЯ</span>
                                     <span>
@@ -284,7 +290,7 @@ export default function Main() {
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -316,6 +322,7 @@ export default function Main() {
                                                     <a
                                                         href="https://vk.com/southern_boxing_academy"
                                                         target="_blank"
+                                                        rel="noopener"
                                                     >
                                                         <div>
                                                             VK:
@@ -328,6 +335,7 @@ export default function Main() {
                                                         }}
                                                         href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                                         target="_blank"
+                                                        rel="noopener"
                                                     >
                                                         <div
                                                             style={{
@@ -341,6 +349,7 @@ export default function Main() {
                                                     <a
                                                         href="tel:+79889504000"
                                                         target="_blank"
+                                                        rel="noopener"
                                                     >
                                                         <div>+79889504000</div>
                                                     </a>
@@ -349,6 +358,7 @@ export default function Main() {
                                                     <a
                                                         href="https://vk.com/southern_boxing_academy"
                                                         target="_blank"
+                                                        rel="noopener"
                                                     >
                                                         <img
                                                             src={vk}
@@ -358,6 +368,7 @@ export default function Main() {
                                                     <a
                                                         href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                                         target="_blank"
+                                                        rel="noopener"
                                                     >
                                                         <img
                                                             src={inst}
@@ -582,12 +593,14 @@ export default function Main() {
                                 <a
                                     href="https://vk.com/southern_boxing_academy"
                                     target="_blank"
+                                    rel="noopener"
                                 >
                                     <img src={vk} alt="" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                     target="_blank"
+                                    rel="noopener"
                                 >
                                     <img src={vk} alt="" />
                                 </a>

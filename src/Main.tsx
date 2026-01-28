@@ -1,19 +1,15 @@
 import { useMediaQuery } from "react-responsive";
 import { useRef, useState } from "react";
-import data_coaches from './data/about_coaches.json';
-import data_price from './data/price.json';
-import logo_small from './accept/logo(small).png'
-import img_menu from './accept/menu.svg'
-import logo from './accept/logo.png'
-import vk from './accept/cib-vk.svg'
-import inst from './accept/cib-instagram.svg'
-import punchingBag from './accept/punchingBag.jpg'
-
-
+import data_coaches from "./data/about_coaches.json";
+import data_price from "./data/price.json";
+import logo_small from "./accept/logo(small).png";
+import img_menu from "./accept/menu.svg";
+import logo from "./accept/logo.png";
+import vk from "./accept/cib-vk.svg";
+import inst from "./accept/cib-instagram.svg";
+import punchingBag from "./accept/punchingBag.jpg";
 
 export default function Main() {
-    
-
     const isBigScreen = useMediaQuery({ query: "(min-width: 500px)" });
 
     const [Menu, SetMenu] = useState(false);
@@ -178,10 +174,7 @@ export default function Main() {
                                 Прайс
                             </p>
                             <p>
-                                <a
-                                    href={"/game"}
-                                    style={{ color: "#dd0e0e" }}
-                                >
+                                <a href={"/game"} style={{ color: "#dd0e0e" }}>
                                     <p>Игра</p>
                                 </a>
                             </p>
@@ -193,7 +186,6 @@ export default function Main() {
 
             {Zapisat ? (
                 <div className="zap" onClick={() => SetZapisat(false)}>
-
                     <div
                         className="window"
                         onClick={(e) => e.stopPropagation()}
@@ -219,14 +211,14 @@ export default function Main() {
                                 <a
                                     href="https://vk.com/southern_boxing_academy"
                                     target="_blank"
-                                    // rel="noopener"
+                                    rel="noreferrer"
                                 >
                                     <img src={vk} alt="" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                     target="_blank"
-                                    // rel="noopener"
+                                    rel="noreferrer"
                                 >
                                     <img src={inst} alt="" />
                                 </a>
@@ -250,9 +242,9 @@ export default function Main() {
                         <div className="zapisat">
                             <div className="wrapper">
                                 <div
-                                    onClick={() => {SetZapisat(true)
-                                        console.log('uyu');
-                                        
+                                    onClick={() => {
+                                        SetZapisat(true);
+                                        console.log("uyu");
                                     }}
                                     className="cta"
                                 >
@@ -322,7 +314,7 @@ export default function Main() {
                                                     <a
                                                         href="https://vk.com/southern_boxing_academy"
                                                         target="_blank"
-                                                        rel="noopener"
+                                                        rel="noreferrer"
                                                     >
                                                         <div>
                                                             VK:
@@ -335,7 +327,7 @@ export default function Main() {
                                                         }}
                                                         href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                                         target="_blank"
-                                                        rel="noopener"
+                                                        rel="noreferrer"
                                                     >
                                                         <div
                                                             style={{
@@ -349,7 +341,7 @@ export default function Main() {
                                                     <a
                                                         href="tel:+79889504000"
                                                         target="_blank"
-                                                        rel="noopener"
+                                                        rel="noreferrer"
                                                     >
                                                         <div>+79889504000</div>
                                                     </a>
@@ -358,17 +350,14 @@ export default function Main() {
                                                     <a
                                                         href="https://vk.com/southern_boxing_academy"
                                                         target="_blank"
-                                                        rel="noopener"
+                                                        rel="noreferrer"
                                                     >
-                                                        <img
-                                                            src={vk}
-                                                            alt=""
-                                                        />
+                                                        <img src={vk} alt="" />
                                                     </a>
                                                     <a
                                                         href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                                         target="_blank"
-                                                        rel="noopener"
+                                                        rel="noreferrer"
                                                     >
                                                         <img
                                                             src={inst}
@@ -537,16 +526,17 @@ export default function Main() {
                         Тренерский состав<span className="flare"></span>
                     </h1>
                     <div className="conteiner">
-                        {data_coaches.map((item, index) => 
-                        <div className="item">
-                          <img src={"./coaches/"+item.img} alt="" />
-                          <div className="info">
-                            <h1>{item.name}</h1>
-                            <p className="red">{item.description1}</p>
-                            <p className="green">{item.description2}</p>
-                            <p className="white">{item.description3}</p>
-                          </div>
-                        </div>)}
+                        {data_coaches.map((item, index) => (
+                            <div className="item">
+                                <img src={"./coaches/" + item.img} alt="" />
+                                <div className="info">
+                                    <h1>{item.name}</h1>
+                                    <p className="red">{item.description1}</p>
+                                    <p className="green">{item.description2}</p>
+                                    <p className="white">{item.description3}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
                 <section className="price" ref={RefPrice}>
@@ -593,14 +583,14 @@ export default function Main() {
                                 <a
                                     href="https://vk.com/southern_boxing_academy"
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noreferrer"
                                 >
                                     <img src={vk} alt="" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/southern.boxing.academy?igsh=ZHZ1cGFwMjk5N2lo"
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noreferrer"
                                 >
                                     <img src={vk} alt="" />
                                 </a>

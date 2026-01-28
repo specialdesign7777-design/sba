@@ -1,5 +1,5 @@
-import MediaQuery, { useMediaQuery } from "react-responsive";
-import { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { useRef, useState } from "react";
 import data_coaches from './data/about_coaches.json';
 import data_price from './data/price.json';
 import logo_small from './accept/logo(small).png'

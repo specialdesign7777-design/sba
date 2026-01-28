@@ -1,0 +1,12 @@
+{ 
+    "big": {
+        "razovoe": "450",
+        "abonement8": "3000",
+        "abonement12": "3500"
+    },
+    "small": {
+        "razovoe": "400",
+        "abonement8": "3000",
+        "abonement12": "3500"
+    }
+}

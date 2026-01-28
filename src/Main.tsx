@@ -597,6 +597,7 @@ export default function Main() {
                             src="https://yandex.ru/map-widget/v1/?um=constructor%3A2669090564d35ba8c8ebbc5bc9c4176358bcaeaacaad1e96e0ed35505437363a&amp;source=constructor"
                             width={isBigScreen ? "700" : "350"}
                             height={isBigScreen ? "560" : "280"}
+                            title="Map"
                         ></iframe>
                     </div>
 

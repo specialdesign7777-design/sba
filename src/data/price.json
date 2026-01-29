@@ -1,12 +1,12 @@
 { 
     "big": {
-        "razovoe": "450",
-        "abonement8": "3000",
-        "abonement12": "3500"
+        "razovoe": "600",
+        "abonement8": "3500",
+        "abonement12": "4000"
     },
     "small": {
-        "razovoe": "400",
-        "abonement8": "3000",
-        "abonement12": "3500"
+        "razovoe": "600",
+        "abonement8": "3500",
+        "abonement12": "4000"
     }
 }

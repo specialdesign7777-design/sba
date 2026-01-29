@@ -531,9 +531,9 @@ export default function Main() {
                                 <img src={"./coaches/" + item.img} alt="" />
                                 <div className="info">
                                     <h1>{item.name}</h1>
-                                    <p className="red">{item.description1}</p>
-                                    <p className="green">{item.description2}</p>
-                                    <p className="white">{item.description3}</p>
+                                    <p className="red">{item.desc1}</p>
+                                    <p className="green">{item.desc2}</p>
+                                    <p className="white">{item.desc3}</p>
                                 </div>
                             </div>
                         ))}

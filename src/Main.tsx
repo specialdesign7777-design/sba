@@ -260,9 +260,9 @@ export default function Main() {
                                             <g
                                                 id="arrow"
                                                 stroke="none"
-                                                stroke-width="1"
+                                                strokeWidth="1"
                                                 fill="none"
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                             >
                                                 <path
                                                     className="one"
@@ -527,7 +527,7 @@ export default function Main() {
                     </h1>
                     <div className="conteiner">
                         {data_coaches.map((item, index) => (
-                            <div className="item">
+                            <div className="item" key={index}>
                                 <img src={"./coaches/" + item.img} alt="" />
                                 <div className="info">
                                     <h1>{item.name}</h1>

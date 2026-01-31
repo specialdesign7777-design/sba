@@ -1,5 +1,6 @@
 // import { get, setCookie } from 'react-cookie';
 import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 import { useMediaQuery } from 'react-responsive';
 
 
@@ -19,20 +20,24 @@ const Game = () => {
         (matches) => setIsClient(true) // Устанавливаем флаг, что клиент загружен
     );
 
+    const [cookies, setCookies ] = useCookies()
+
+
     useEffect(() => {
-        // const cookieData = getCookie('moves');
-        // if (cookieData) {
-        //     try {
-        //         const parsed = JSON.parse(cookieData.toString());
-        //         if (Array.isArray(parsed)) {
-        //             setSelected(parsed);
-        //         }
-        //     } catch (e) {
-        //         console.error('Ошибка парсинга куки:', e);
-        //     }
-        // }
+
+        const cookieData = cookies['moves'];
+        if (cookieData) {
+            try {
+                const parsed = JSON.parse(cookieData.toString());
+                if (Array.isArray(parsed)) {
+                    setSelected(parsed);
+                }
+            } catch (e) {
+                console.error('Ошибка парсинга куки:', e);
+            }
+        }
         setIsClient(true); // Устанавливаем флаг клиента
-    }, []);
+    }, [cookies]);
 
     useEffect(() => {
         return () => {
@@ -68,7 +73,7 @@ const Game = () => {
 
     const endGame = () => {
         if (intervalId) clearInterval(intervalId);
-        // setCookie('moves', JSON.stringify(selected));
+        setCookies('moves', JSON.stringify(selected));
         setStart(false);
         setPrint('Старт');
     };

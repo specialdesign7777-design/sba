@@ -572,7 +572,7 @@ export default function Main() {
                         </div>
                     </div>
                 </section>
-                <section ref={RefAdress}>
+                <section id="contact" ref={RefAdress}>
                     <div className="adress">
                         <div className="contact">
                             <img src={logo} width={200} alt="" />

@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Закрываем от индексации системные файлы и папки
+Disallow: /node_modules/
+Disallow: /src/              # исходники React-проекта
+Disallow: /build/            # или /dist/ - если они доступны из корня
+Disallow: /.env
+Disallow: /.git/
+Disallow: /.idea/
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /yarn.lock
+
+# Закрываем от индексации файлы определенных типов (если они лежат в корне)
+Disallow: /*.json$
+Disallow: /*.css$   
+
+# Указываем путь к карте сайта (SITEMAP) - ОБЯЗАТЕЛЬНО СОЗДАЙТЕ ЕГО!
+Sitemap: https://sba-tgn.vercel.app/sitemap.xml

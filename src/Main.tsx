@@ -400,7 +400,7 @@ export default function Main() {
                         </div>
                     </div>
                 </section>
-                <section ref={RefSchedule} className="schedule">
+                <section id="schedule" ref={RefSchedule} className="schedule">
                     <img className="media-none" src={punchingBag} alt="" />
                     <div className="info">
                         <h1 className="title">Групповые тренировки</h1>
@@ -521,7 +521,7 @@ export default function Main() {
                     </div>
                 </section>
 
-                <section className="coaches" ref={RefCoaches}>
+                <section className="coaches" id="coaches" ref={RefCoaches}>
                     <h1 className="title">
                         Тренерский состав<span className="flare"></span>
                     </h1>
@@ -539,7 +539,7 @@ export default function Main() {
                         ))}
                     </div>
                 </section>
-                <section className="price" ref={RefPrice}>
+                <section className="price" id="price" ref={RefPrice}>
                     <h1>Прайс Лист</h1>
                     <div className="conteiner">
                         <div className="item grownUp">
